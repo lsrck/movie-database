@@ -1,1 +1,20 @@
-<h1>Résultats de la recherche</h1>
+<h1> Resultats de votre recherche <%= @name %> </h1>
+
+<% if @movies.count > 1 %>
+<h2> Seul les 20 premiers résultats sont affichés </h2>
+<table class="table table-striped">
+      <tr>
+      	<th>Movie</th>
+   	  </tr>
+
+<% @movies.each do |movie| %> 
+    <tr>
+    	<td> <%= movie.title %> </td>
+    	<%end%>
+    </tr>
+  </table>
+
+<% else %>
+<p class="text-center"> It seems that no movie correponds to your search... </p>
+<% end %>
+

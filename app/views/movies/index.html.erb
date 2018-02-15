@@ -1,0 +1,9 @@
+<h1>Recherche dans la base de données</h1>
+
+<p>Rechercher le film:</p>
+
+<%= form_tag (movies_path) do %>
+<%= text_field_tag "search" %>
+<br>
+<%= submit_tag "recherche !"%>
+<% end %>
